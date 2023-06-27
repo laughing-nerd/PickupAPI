@@ -12,7 +12,7 @@ app.get("/", (req,res)=>{
 });
 
 app.get("/pickup", (req,res)=>{
-	res.send(pick.pick1);
+	res.send(pick);
 });
 
 app.listen(port, (req, res)=>{
