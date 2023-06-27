@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
-const pickup = require("./data.js");
+const pick = require("./data.json");
 
 const app = new express();
 app.use(cors());
@@ -13,9 +12,7 @@ app.get("/", (req,res)=>{
 });
 
 app.get("/pickup", (req,res)=>{
-	const RandomIndex = Math.floor(Math.random()*pickup.length)
-	const pickupline = pickup[RandomIndex];
-	res.send(pickupline);
+	res.send(pick.pick1);
 });
 
 app.listen(port, (req, res)=>{
