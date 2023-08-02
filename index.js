@@ -9,7 +9,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 
 app.get("/", (req,res)=>{
-	res.send("Just a simple pickup lines api!");
+	res.send("Just a simple pickup lines api!\nEndpoint: /pickup");
 });
 
 app.get("/pickup", (req,res)=>{
